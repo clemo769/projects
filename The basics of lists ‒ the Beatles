@@ -1,0 +1,21 @@
+# Step 1: Create an empty list named beatles
+beatles = []
+
+# Step 2: Use the append() method to add John Lennon, Paul McCartney, and George Harrison to the list
+beatles.append("John Lennon")
+beatles.append("Paul McCartney")
+beatles.append("George Harrison")
+
+# Step 3: Use the for loop and the append() method to prompt the user to add Stu Sutcliffe and Pete Best to the list
+for i in range(2):
+    new_member = input("Enter a new member of the band: ")
+    beatles.append(new_member)
+
+# Step 4: Use the del instruction to remove Stu Sutcliffe and Pete Best from the list
+del beatles[-2:]  # Remove the last two elements
+
+# Step 5: Use the insert() method to add Ringo Starr to the beginning of the list
+beatles.insert(0, "Ringo Starr")
+
+# Print the final list
+print("Final list of Beatles members:", beatles)
