@@ -84,3 +84,13 @@ mean_house_price = sum(houses_columnwise["price_approx_usd"]) / len(houses_colum
 
 # Print `mean_house_price` object type
 print("mean_house_price type:", type(mean_house_price))
+# Get output of `mean_house_price`
+print(mean_house_price)
+price = houses_columnwise["price_approx_usd"]
+area = houses_columnwise["surface_covered_in_m2"]
+price_per_m2 = []
+for p , a in zip(price,area):
+    price_m2 = p / a
+    price_per_m2.append(price_m2)
+houses_columnwise["prices_per_m2"] = price_per_m2
+print([houses_columnwise])
