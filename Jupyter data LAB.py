@@ -94,3 +94,25 @@ for p , a in zip(price,area):
     price_per_m2.append(price_m2)
 houses_columnwise["prices_per_m2"] = price_per_m2
 print([houses_columnwise])
+# Import pandas library, aliased as `pd`
+import pandas as pd
+
+# Declare variable `df_houses`
+df_houses = pd.DataFrame(houses_columnwise)
+
+# Print `df_houses` object type
+print("df_houses type:", type(df_houses))
+
+# Print `df_houses` shape
+print("df_houses shape:", df_houses.shape)
+
+# Get output of `df_houses`
+print(df_houses)
+
+df1 = pd.read_csv("C:/Users/cleme/Downloads/properati-real-estate-listings-mexico/properati-MX-2016-11-01-properties-rent.csv")
+df2 = pd.read_csv("C:/Users/cleme/Downloads/properati-real-estate-listings-mexico/properati-MX-2016-11-01-properties-sell.csv")
+print(df1)
+print(type(df1))
+print(df1.shape)
+df1.info()
+df1.head()
